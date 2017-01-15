@@ -108,35 +108,130 @@ Poniższy diagram oraz tabela prezentują wszystkie możliwe przypadki użycia s
 \FloatBarrier
 
 \hspace*{-4cm}
-\begin{longtable}{|p{.20\textwidth}|p{.03\textwidth}|p{.2\textwidth}|p{.35\textwidth}|p{.35\textwidth}|}
+\begin{longtable}{|p{.20\textwidth}|p{.03\textwidth}|p{.2\textwidth}|p{.7\textwidth}|}
 \caption{Przypadki użycia}
 \\
 \hline
-Aktor & Lp & Nazwa & Opis & Odpowiedź systemu \\ \hline
+Aktor 
+& Lp 
+& Nazwa 
+& Opis 
+\\ \hline
 \endhead
 \hline
 \endfoot
-\multirow{11}{.20\textwidth}{Gracz/Kapitan Drużyny} & 1 & Move & Rusz graczem w kierunku góra/dół/lewo/prawo & Gracz zmienia położenie na ekranie lub nie, w zależności od poprawności akcji \\ \cline{2-5}
-	& 2 & Discover & Odkryj zawartość otaczających pól oraz poznaj ich odległości od najbliższego zadania & Wypełnia pola w graficznym interfejsie odpowiednimi informacjami \\ \cline{2-5}
-	& 3 & Pick up piece & Podnieś zadanie z pola, na którym stoisz & Jeśli gracz stoi na polu z zadaniem, zadanie znika z planszy i jego opis pojawia się w odpowiednim miejscu interfejsu; w przeciwnym przypadku nic się nie dzieje \\ \cline{2-5}
-	& 4 & Test piece & Sprawdź, czy zadanie jest użyteczne & Wyświetla się informacja o użyteczności podniesionego zadania. Jeśli jest bezużyteczne, zostaje wyrzucone. \\ \cline{2-5}
-	& 5 & Place piece & Użyj zadania do osiągnięcia celu, na którym stoisz & Jeśli zadanie nie było użyteczne, nie dzieje się nic. Jeśli zadanie było użyteczne, odkrywa cel jako osiągnięty i informuje, czy był to cel służący do zrealizowania projektu. \\ \cline{2-5}
-	& 6 & Send action request & Wyślij zlecenie wykonania akcji (dowolnego przypadku użycia z przedziału 1-5) przez gracza do Mistrza Gry, by mógł potwierdzić poprawność operacji oraz zaktualizować planszę. Wykonywane bez wywołania przez gracza w momencie zlecenia dowolnej z akcji 1-5 & Aktualizacja planszy widocznej dla gracza i ogólnych informacji o stanie gry \\ \cline{2-5}
-	& 7 & Attempt to connect & Spróbuj połączyć się z serwerem gry & Przeniesienie do ekranu lobby w wypadku powodzenia, informacja o błędzie w wypadku niepowodzenia \\ \cline{2-5}
-	& 8 & Disconnect & Rozłącz się z serwerem gry (opuść grę) & Przeniesienie do menu głównego gry \\ \cline{2-5}
-	& 9 & Request communication & Wyślij do innego gracza prośbę o rozpoczęcie korespondencji & Otwarcie kanału komunikacji między graczami w wypadku zaakceptowania prośby; w przypadku odrzucenia - informacja o tym; w przypadku braku odpowiedzi, po upływie określonego czasu - informacja o tym \\ \cline{2-5}
-	& 10 & Accept communication request & Zaakceptuj prośbę komunikacji od innego gracza & Otwarcie kanału komunikacji między graczami. \\ \cline{2-5}
-	& 11 & Communicate & Komunikuj się z innym graczem z drużyny. Wyślij/przeczytaj wiadomość od innego gracza. Wymaga zaakceptowania prośby o komunikację przez docelowego członka drużyny (10) & Wyświetlenie wiadomości w okienku czatu \\ \hline
-Kapitan Drużyny & 12 & Communicate with teammates & Komunikuj się z innym członkiem drużyny. Kapitan drużyny ma większe kompetencje od zwykłego gracza i nie musi prosić o komunikację. & Wyświetlenie wiadomości w okienku czatu \\ \hline
+\multirow{11}{.20\textwidth}{Gracz/Kapitan Drużyny} 
+& 1 
+& Move 
+& Rusz graczem w kierunku góra/dół/lewo/prawo. Aby ruch został zrealizowany, Game Master musi zostać powiadomiony o chęci wykonania tego ruchu i go zatwierdzić (patrz \textit{\# 6 Send action request}). 
+\\ \cline{2-4}
+& 2 
+& Discover 
+& Odkryj zawartość otaczających pól oraz poznaj ich odległości od najbliższego zadania. Aby akcja została zrealizowana, musi zostać wykonany \textit{\# 6 Send action request}.
+\\ \cline{2-4}
+& 3 
+& Pick up piece 
+& Podnieś zadanie z pola, na którym stoisz. Jeśli gracz stoi na polu z zadaniem, zadanie znika z planszy; w przeciwnym przypadku nic się nie dzieje. Akcja musi zostać zatwierdzona przez Mistrza Gry (patrz \textit{\# 6 Send action request}).
+\\ \cline{2-4}
+& 4 
+& Test piece 
+& Sprawdź, czy zadanie jest użyteczne. Jeśli jest bezużyteczne, zostaje wyrzucone. Akcja musi zostać zatwierdzona przez Mistrza Gry (patrz \textit{\# 6 Send action request}).
+\\ \cline{2-4}
+& 5 
+& Place piece 
+& Użyj zadania do osiągnięcia celu, na którym stoisz. Jeśli zadanie nie było użyteczne, nie dzieje się nic. Jeśli zadanie było użyteczne, odkrywa cel jako osiągnięty i informuje, czy był to cel służący do zrealizowania projektu. Akcja musi zostać zatwierdzona przez Mistrza Gry (patrz \textit{\# 6 Send action request}). 
+\\ \cline{2-4}
+& 6 
+& Send action request 
+& Wyślij zlecenie wykonania akcji (dowolnego przypadku użycia z przedziału 1-5) przez gracza do Mistrza Gry, by mógł potwierdzić poprawność operacji oraz zaktualizować planszę. Wykonywane bez wywołania przez gracza w momencie zlecenia dowolnej z akcji 1-5. Gracz nie posiada żadnych danych poza tymi, które są mu znane. Stąd każda akcja musi być zatwierdzona przez GM, który odsyła zaktualizowaną planszę po każdej zmianie. To zapobiega kolizjom, desynchronizacji i próbom hackowania gry.
+\\ \cline{2-4}
+& 7 
+& Attempt to connect 
+& Spróbuj połączyć się z serwerem gry. W wypadku błędu gracz będzie próbował aż do skutku bądź osiągnięcia limitu prób. Potem dołączy do aktualnego stanu gry (powodzenie) lub się wyłączy (niepowodzenie).
+\\ \cline{2-4}
+& 8 
+& Disconnect 
+& Rozłącz się z serwerem gry (opuść grę). Natychmiast po tym wyłącza aplikację gracza. Gracz rozłącza się z własnej woli jedynie w przypadku zakończenia gry, chyba że pewna implementacja sztucznej inteligencji w przyszłości będzie zamierzenie rozłączać gracza.
+\\ \cline{2-4}
+& 9 
+& Request communication 
+& Wyślij do innego gracza prośbę o rozpoczęcie korespondencji. Skutkuje otwarciem kanału komunikacji między graczami w wypadku zaakceptowania prośby; w przypadku odrzucenia - informacja o tym; w przypadku braku odpowiedzi, po upływie określonego czasu - równoznaczne z odrzuceniem. Od tego momentu gracze mogą fizycznie komunikować się ze sobą.
+\\ \cline{2-4}
+& 10 
+& Accept communication request 
+& Zaakceptuj prośbę komunikacji od innego gracza. Otwiera kanał komunikacji między graczami.
+\\ \cline{2-4}
+& 11 
+& Communicate 
+& Komunikuj się z innym graczem z drużyny. Wyślij/przeczytaj wiadomość od innego gracza. Wymaga zaakceptowania prośby o komunikację przez docelowego członka drużyny (\# 10).
+\\ \hline
+Kapitan Drużyny 
+& 12 
+& Communicate with teammates 
+& Komunikuj się z innym członkiem drużyny. Kapitan drużyny ma większe kompetencje od zwykłego gracza i nie musi prosić o komunikację. Automatycznie otwiera dwustronne połączenie do komunikacji między kapitanem a docelowym graczem. 
+\\ \hline
+\multirow{6}{.20\textwidth}{Game Master}
+& 13
+& Begin game
+& Wyzwala akcję generowania planszy (\# 14). Ustawia stan gry na rozpoczęty. Informuje o tym graczy za pośrednictwem serwera komunikacji. 
+\\ \cline{2-4}
+& 14
+& Generate board
+& Generuje planszę po raz pierwszy według podanych w pliku konfiguracyjnym lub w programie danych wejściowych. Wymusza aktualizację planszy i powiadomienie o tym graczy (akcja \# 17).
+\\ \cline{2-4}
+& 15
+& Generate a new piece
+& Generuje nowy element \textit{piece} na planszy w obszarze \textit{task area}. Wymusza aktualizację planszy (\# 17).
+\\ \cline{2-4}
+& 16
+& Receive action request
+& Odbiera zlecenie wykonania akcji przez gracza (wysłane przez \textit{\# 6 Send action request}). Wykonanie zleconej akcji wymusza aktualizację planszy (\# 17) oraz odesłanie informacji o powodzeniu akcji (\# 18).
+\\ \cline{2-4}
+& 17
+& Update board
+& Wprowadza zmiany w planszy i rozsyła odpowiednie informacje o stanie planszy przeznaczone dla graczy.
+\\ \cline{2-4}
+& 18
+& Send back action result
+& Odsyła informację o powodzeniu zleconej akcji (odebranej w \# 16).
+\\ \hline
+\multirow{4}{.20\textwidth}{Communication Server}
+& 19
+& Receive message
+& Odbiera wiadomość będącą na wejściu danego połączenia.
+\\ \cline{2-4}
+& 20
+& Send/transmit message
+& Przekierowuje odebraną wcześniej wiadomość (\# 19) do odpowiedniego odbiorcy lub wysyła własny komunikat.
+\\ \cline{2-4}
+& 21
+& Accept connection request
+& Akceptuje próbę połączenia przez danego klienta.
+\\ \cline{2-4}
+& 22
+& Manage connection statuses
+& Kontroluj stany połączeń. Tworzy nowe tunele dla konwersacji między graczami. Zamyka tunele zakończonych konwersacji. Sprawdza i informuje o nagłych rozłączeniach.
+\\ \hline
 \end{longtable}
 \FloatBarrier
 
 \begin{longtable}[!h]{|p{.20\textwidth}|p{.80\textwidth}|}
 \caption{Aktorzy korzystający z systemu}
 \\ \hline
-Nazwa & Opis \\ \hline
-Gracz & Gracz uczestniczący w rozgrywce. Może być człowiekiem lub programem. \\ \hline
-Kapitan Drużyny & Wyróżniony gracz, który może bez wysyłania prośby komunikować się z innymi graczami z drużyny. Każda drużyna ma dokładnie jednego kapitana. \\ \hline
+Nazwa 
+& Opis 
+\\ \hline
+Gracz 
+& Gracz uczestniczący w rozgrywce. Jest programem uruchamianym automatycznie na potrzeby gry. 
+\\ \hline
+Kapitan Drużyny 
+& Wyróżniony gracz, który może bez wysyłania prośby komunikować się z innymi graczami z drużyny. Każda drużyna ma dokładnie jednego kapitana. 
+\\ \hline
+Game Master
+& Aplikacja kontrolująca przebieg gry. Generuje planszę, przekazuje informacje o niej graczom, aktualizuje ją i decyduje o rozpoczęciu i zakończeniu rozgrywki.
+\\ \hline
+Communication Server
+& Aplikacja służąca do ustanowienia komunikacji między graczami i Game Masterem. Jej jedynym celem jest przesyłanie danych i zarządzanie połączeniami.
 \end{longtable}
 \FloatBarrier
 
