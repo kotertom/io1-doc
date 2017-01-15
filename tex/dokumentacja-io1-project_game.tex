@@ -305,4 +305,26 @@ Zależności między obiektami powinny zachodzić jak na poniższym diagramie kl
 	\item[ComunicationServer] Serwer komunikacji przekazujący wiadomości między użytkownikami. Singleton. Posiada listę bezpośrednich połączeń do użytkowników. Nadchodzące wiadomości są gromadzone w kolejce, z której serwer je pobiera i przekazuje do adresatów.
 \end{description}
 
+\subsection{System komunikacji}
+
+\subsubsection{Mechanizm}
+\par
+Wszelka komunikacja może występować w następujących płaszczyznach:
+\begin{description}
+\item[Mistrz Gry - Serwer Komunikacji] Służy ustanowieniu połączenia. Ponadto serwer komunikacji informuje mistrza gry o zaburzeniach toku gry w postaci rozłączeń.
+\item[Gracz - Serwer Komunikacji] Służy ustanowieniu i utrzymaniu połączenia.
+\item[Gracz - Mistrz Gry] Mistrz Gry informuje graczy o zmianach w układzie planszy, przekazuje im konsekwencje ich działań oraz o statusie gry. Gracze zlecają Mistrzowi Gry wykonanie operacji na rzecz gracza.
+\item[Gracz - Gracz] Gracze mogą komunikować się między sobą, by przekazać informacje o planszy i stanie gry z ich perspektywy.
+\end{description}
+
+\par
+Niezależnie od płaszczyzny, \textbf{serwer komunikacji} zawsze jest ogniwem w drodze przekazywania komunikatów. Albo on sam komunikuje się (MG - Serwer lub Gracz - Serwer), albo przekazuje komunikaty między graczami a mistrzem gry lub graczami a graczami. Nie istnieją połączenia bezpośrednie, omijające \textbf{serwer komunikacji}.
+\par
+Pomimo tego, że serwer komunikacji pośredniczy w każdej wymianie informacji, każda jednostka zdolna komunikować się (\textit{CommunicativeEntity}) posiada moduł (\textit{Messenger}), który wykonuje wszystkie działania potrzebne do komunikacji. Z punktu widzenia takiej jednostki komunikacja jest bezpośrednia, ponieważ dla każdej pary jednostek komunikujących się \textbf{serwer komunikacji} tworzy połączenie w postaci wirtualnego tunelu. Tunel posiada dwa punkty wejścia/wyjścia, to jest \textit{Messengery} dwóch jednostek komunikujących się ze sobą. Z zewnątrz nie widać żadnych mechanizmów wewnętrznych, można jedynie pisać do tunelu i odczytywać wiadomości z niego. W rzeczywistości jednak tunel prowadzi przez \textbf{serwer komunikacji}, który przekazuje wiadomości na bieżąco do \textit{Messengerów}.
+
+\subsubsection{Protokół}
+\par
+Wszystkie wiadomości zostają przekonwertowane na format JSON. Wybór ten jest motywowany niezależnością od języka programowania, powszechnością parserów oraz choćby tym, że format JSON jest bardziej zwięzły niż XML. Następnie łańcuch znaków jest pakowany w pakiety TCP/IP i transmitowany. TCP, mimo że powolniejszy niż UDP, bo wymaga potwierdzeń i uwzględnia retransmisję, jest wygodniejszy w użyciu. Ponadto prędkość UDP nie zostałaby w pełni wykorzystana, ponieważ gra nie jest na tyle złożona.
+
+
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  15 JAN 2017 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  15 JAN 2017 22:15
 entering extended mode
 **./dokumentacja-io1-project_game.tex
 (dokumentacja-io1-project_game.tex
@@ -954,25 +954,26 @@ Overfull \hbox (3.57745pt too wide) in paragraph at lines 297--298
 []\T1/lmr/m/n/10.95 ›¡danie za-twier-dze-nia pew-nej ak-cji gra-cza, wy-
  []
 
-[10] (dokumentacja-io1-project_game.aux) ) 
+[10] [11] (dokumentacja-io1-project_game.aux) ) 
 Here is how much of TeX's memory you used:
- 5177 strings out of 493334
- 67433 string characters out of 3139251
+ 5183 strings out of 493334
+ 67551 string characters out of 3139251
  176666 words of memory out of 3000000
- 8558 multiletter control sequences out of 15000+200000
+ 8564 multiletter control sequences out of 15000+200000
  48448 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,35p,923b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/en
-c/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb>
+{C:/Program Files/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+bx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb
+>
 Output written on D:/studia/sem5/IO1/Dokumentacja/tex/dokumentacja-io1-project_
-game.pdf (11 pages, 550009 bytes).
+game.pdf (12 pages, 557941 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
