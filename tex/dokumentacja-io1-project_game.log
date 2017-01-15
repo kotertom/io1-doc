@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  15 JAN 2017 19:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  15 JAN 2017 20:31
 entering extended mode
 **./dokumentacja-io1-project_game.tex
 (dokumentacja-io1-project_game.tex
@@ -672,7 +672,7 @@ Package: rotating 2016/05/22 v2.16c rotated objects in LaTeX
 \rot@float@box=\box36
 \rot@mess@toks=\toks31
 )
-(dokumentacja-io1-project_game.aux)
+No file dokumentacja-io1-project_game.aux.
 \openout1 = `dokumentacja-io1-project_game.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -688,7 +688,6 @@ LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 35.
-
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -759,47 +758,48 @@ Package pdftex.def Info: ../res/logo.png used on input line 42.
 [1
 
 {C:/Users/revai/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../res/logo
-.png>] (dokumentacja-io1-project_game.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 4.
+.png>]
+No file dokumentacja-io1-project_game.toc.
+\tf@toc=\write3
+\openout3 = `dokumentacja-io1-project_game.toc'.
 
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 79.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 79.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 4.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 79.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 4.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 79.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 4.
+(Font)              <10.95> on input line 79.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 79.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 4.
-LaTeX Font Info:    Try loading font information for U+esint on input line 4.
+(Font)              <6> on input line 79.
+LaTeX Font Info:    Try loading font information for U+esint on input line 79.
 
 (C:\Users\revai\AppData\Roaming\MiKTeX\2.9\tex\latex\esint\uesint.fd
 File: uesint.fd 
-))
-\tf@toc=\write3
-\openout3 = `dokumentacja-io1-project_game.toc'.
-
-
+)
 Underfull \hbox (badness 10000) in paragraph at lines 79--79
 []|\T1/lmr/m/n/10.95 Sebastian Ja-ku-biak,
  []
 
-[1] <../res/usecase.png, id=16, 1429.34pt x 874.26625pt>
+[1] <../res/usecase.png, id=15, 1429.34pt x 874.26625pt>
 File: ../res/usecase.png Graphic file (type png)
 
 <use ../res/usecase.png>
@@ -960,14 +960,14 @@ Overfull \hbox (25.19998pt too wide) in alignment at lines 134--140
  [] [] 
  []
 
-[5] <../res/architecture.png, id=31, 534.99875pt x 434.62375pt>
+[5] <../res/architecture.png, id=30, 534.99875pt x 434.62375pt>
 File: ../res/architecture.png Graphic file (type png)
 
 <use ../res/architecture.png>
 Package pdftex.def Info: ../res/architecture.png used on input line 158.
 (pdftex.def)             Requested size: 534.99744pt x 434.62268pt.
 
-<../res/class_diagram.png, id=32, 1234.6125pt x 680.5425pt>
+<../res/class_diagram.png, id=31, 1234.6125pt x 680.5425pt>
 File: ../res/class_diagram.png Graphic file (type png)
 
 <use ../res/class_diagram.png>
@@ -994,22 +994,26 @@ Overfull \hbox (3.57745pt too wide) in paragraph at lines 202--203
 []\T1/lmr/m/n/10.95 ›¡danie za-twier-dze-nia pew-nej ak-cji gra-cza, wy-
  []
 
-[9] (dokumentacja-io1-project_game.aux) ) 
+[9] (dokumentacja-io1-project_game.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5176 strings out of 493334
- 67325 string characters out of 3139251
- 166684 words of memory out of 3000000
+ 5172 strings out of 493334
+ 67193 string characters out of 3139251
+ 166564 words of memory out of 3000000
  8558 multiletter control sequences out of 15000+200000
  48448 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,35p,923b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc
-/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
-/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb>
-Output written on dokumentacja-io1-project_game.pdf (10 pages, 543178 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/lm/lmri12.pfb>
+Output written on dokumentacja-io1-project_game.pdf (10 pages, 541850 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
