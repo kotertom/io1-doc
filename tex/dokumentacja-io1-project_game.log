@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  15 JAN 2017 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  15 JAN 2017 22:42
 entering extended mode
 **./dokumentacja-io1-project_game.tex
 (dokumentacja-io1-project_game.tex
@@ -646,65 +646,90 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (C:\Users\revai\AppData\Roaming\MiKTeX\2.9\tex\latex\placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
+(C:\Users\revai\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count121
+\lst@gtempboxa=\box32
+\lst@token=\toks30
+\lst@length=\count122
+\lst@currlwidth=\dimen153
+\lst@column=\count123
+\lst@pos=\count124
+\lst@lostspace=\dimen154
+\lst@width=\dimen155
+\lst@newlines=\count125
+\lst@lineno=\count126
+\lst@maxwidth=\dimen156
+
+(C:\Users\revai\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count127
+\lst@skipnumbers=\count128
+\lst@framebox=\box33
+)
+(C:\Users\revai\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip57
 \LTright=\skip58
 \LTpre=\skip59
 \LTpost=\skip60
-\LTchunksize=\count121
-\LTcapwidth=\dimen153
-\LT@head=\box32
-\LT@firsthead=\box33
-\LT@foot=\box34
-\LT@lastfoot=\box35
-\LT@cols=\count122
-\LT@rows=\count123
-\c@LT@tables=\count124
-\c@LT@chunks=\count125
-\LT@p@ftn=\toks30
+\LTchunksize=\count129
+\LTcapwidth=\dimen157
+\LT@head=\box34
+\LT@firsthead=\box35
+\LT@foot=\box36
+\LT@lastfoot=\box37
+\LT@cols=\count130
+\LT@rows=\count131
+\c@LT@tables=\count132
+\c@LT@chunks=\count133
+\LT@p@ftn=\toks31
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty"
 Package: rotating 2016/05/22 v2.16c rotated objects in LaTeX
-\c@r@tfl@t=\count126
+\c@r@tfl@t=\count134
 \rotFPtop=\skip61
 \rotFPbot=\skip62
-\rot@float@box=\box36
-\rot@mess@toks=\toks31
+\rot@float@box=\box38
+\rot@mess@toks=\toks32
 )
 (dokumentacja-io1-project_game.aux)
 \openout1 = `dokumentacja-io1-project_game.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 36.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\revai\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
-\scratchdimen=\dimen154
-\scratchbox=\box37
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count130
-\MPscratchDim=\dimen155
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count135
+\scratchdimen=\dimen158
+\scratchbox=\box39
+\nofMPsegments=\count136
+\nofMParguments=\count137
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count138
+\MPscratchDim=\dimen159
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
+\everyMPtoPDFconversion=\toks34
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -750,10 +775,12 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+\c@lstlisting=\count141
+
 <../res/logo.png, id=1, 376.40625pt x 367.3725pt>
 File: ../res/logo.png Graphic file (type png)
  <use ../res/logo.png>
-Package pdftex.def Info: ../res/logo.png used on input line 42.
+Package pdftex.def Info: ../res/logo.png used on input line 43.
 (pdftex.def)             Requested size: 56.4585pt x 55.10349pt.
 
 [1
@@ -795,7 +822,7 @@ File: uesint.fd
 \openout3 = `dokumentacja-io1-project_game.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []|\T1/lmr/m/n/10.95 Sebastian Ja-ku-biak,
  []
 
@@ -803,120 +830,120 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--79
 File: ../res/usecase.png Graphic file (type png)
 
 <use ../res/usecase.png>
-Package pdftex.def Info: ../res/usecase.png used on input line 107.
+Package pdftex.def Info: ../res/usecase.png used on input line 108.
 (pdftex.def)             Requested size: 1429.33652pt x 874.26411pt.
 
-Overfull \hbox (85.61052pt too wide) in paragraph at lines 103--108
+Overfull \hbox (85.61052pt too wide) in paragraph at lines 104--109
 []|  [] 
  []
 
 [2]
-Overfull \hbox (2.12743pt too wide) in paragraph at lines 116--117
+Overfull \hbox (2.12743pt too wide) in paragraph at lines 117--118
 []|\T1/lmr/m/n/10.95 Lp| 
  []
 
 
-Overfull \hbox (96.79623pt too wide) in alignment at lines 111--120
+Overfull \hbox (96.79623pt too wide) in alignment at lines 112--121
  [] [] [] [] 
  []
 
 
-Overfull \hbox (96.79623pt too wide) in alignment at lines 120--122
+Overfull \hbox (96.79623pt too wide) in alignment at lines 121--123
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 []|\T1/lmr/m/n/10.95 Attempt to
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 157--158
+Underfull \hbox (badness 5622) in paragraph at lines 158--159
 []|\T1/lmr/m/n/10.95 Request com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 []|\T1/lmr/m/n/10.95 Accept com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 \T1/lmr/m/n/10.95 mu-ni-ca-tion
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 168--169
+Underfull \hbox (badness 5696) in paragraph at lines 169--170
 []|\T1/lmr/m/n/10.95 Kapitan Dru-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 []|\T1/lmr/m/n/10.95 Communicate
  []
 
 
-Underfull \hbox (badness 2158) in paragraph at lines 170--171
+Underfull \hbox (badness 2158) in paragraph at lines 171--172
 \T1/lmr/m/n/10.95 with te-am-ma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 []|\T1/lmr/m/n/10.95 Generate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 []|\T1/lmr/m/n/10.95 Generate a
  []
 
 
-Overfull \hbox (3.73743pt too wide) in paragraph at lines 198--198
+Overfull \hbox (3.73743pt too wide) in paragraph at lines 199--199
 []|\T1/lmr/m/n/10.95 Communication 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 []|\T1/lmr/m/n/10.95 Receive mes-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 []|\T1/lmr/m/n/10.95 Send/transmit
  []
 
 
-Overfull \hbox (96.79623pt too wide) in alignment at lines 122--206
+Overfull \hbox (96.79623pt too wide) in alignment at lines 123--207
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 []|\T1/lmr/m/n/10.95 Manage con-
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 212--213
+Underfull \hbox (badness 2932) in paragraph at lines 213--214
 \T1/lmr/m/n/10.95 nec-tion sta-tu-
  []
 
 
-Overfull \hbox (96.79623pt too wide) in alignment at lines 206--215
+Overfull \hbox (96.79623pt too wide) in alignment at lines 207--216
  [] [] [] [] 
  []
 
 [3 <../res/usecase.png>] [4] [5]
-Underfull \hbox (badness 5696) in paragraph at lines 227--228
+Underfull \hbox (badness 5696) in paragraph at lines 228--229
 []|\T1/lmr/m/n/10.95 Kapitan Dru-
  []
 
 
-Overfull \hbox (3.73743pt too wide) in paragraph at lines 233--234
+Overfull \hbox (3.73743pt too wide) in paragraph at lines 234--235
 []|\T1/lmr/m/n/10.95 Communication
  []
 
 
-Overfull \hbox (25.19998pt too wide) in alignment at lines 218--235
+Overfull \hbox (25.19998pt too wide) in alignment at lines 219--236
  [] [] 
  []
 
@@ -924,17 +951,17 @@ Overfull \hbox (25.19998pt too wide) in alignment at lines 218--235
 File: ../res/architecture.png Graphic file (type png)
 
 <use ../res/architecture.png>
-Package pdftex.def Info: ../res/architecture.png used on input line 253.
+Package pdftex.def Info: ../res/architecture.png used on input line 254.
 (pdftex.def)             Requested size: 534.99744pt x 434.62268pt.
 
 <../res/class_diagram.png, id=36, 1234.6125pt x 680.5425pt>
 File: ../res/class_diagram.png Graphic file (type png)
 
 <use ../res/class_diagram.png>
-Package pdftex.def Info: ../res/class_diagram.png used on input line 266.
+Package pdftex.def Info: ../res/class_diagram.png used on input line 267.
 (pdftex.def)             Requested size: 1234.6095pt x 680.54083pt.
 
-Overfull \hbox (105.18556pt too wide) in paragraph at lines 262--267
+Overfull \hbox (105.18556pt too wide) in paragraph at lines 263--268
 []|  [] 
  []
 
@@ -942,7 +969,7 @@ Overfull \hbox (105.18556pt too wide) in paragraph at lines 262--267
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7 <../res/architecture.png>] [8 <../res/class_diagram.png>]
-Overfull \hbox (7.61287pt too wide) in paragraph at lines 285--286
+Overfull \hbox (7.61287pt too wide) in paragraph at lines 286--287
 []\T1/lmr/m/n/10.95 Pojedyncze pole na plan-szy. Po-siada od-wo-ªa-nie do dru»y
 ny-wªa±ciciela;
  []
@@ -950,19 +977,19 @@ ny-wªa±ciciela;
 [9
 
 ]
-Overfull \hbox (3.57745pt too wide) in paragraph at lines 297--298
+Overfull \hbox (3.57745pt too wide) in paragraph at lines 298--299
 []\T1/lmr/m/n/10.95 ›¡danie za-twier-dze-nia pew-nej ak-cji gra-cza, wy-
  []
 
 [10] [11] (dokumentacja-io1-project_game.aux) ) 
 Here is how much of TeX's memory you used:
- 5183 strings out of 493334
- 67551 string characters out of 3139251
- 176666 words of memory out of 3000000
- 8564 multiletter control sequences out of 15000+200000
+ 6775 strings out of 493334
+ 88490 string characters out of 3139251
+ 197663 words of memory out of 3000000
+ 10144 multiletter control sequences out of 15000+200000
  48448 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,35p,923b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,12n,35p,923b,969s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fon
 ts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
 bx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Prog
@@ -971,7 +998,7 @@ ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2
 lic/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb
 >
 Output written on D:/studia/sem5/IO1/Dokumentacja/tex/dokumentacja-io1-project_
-game.pdf (12 pages, 557941 bytes).
+game.pdf (12 pages, 559126 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

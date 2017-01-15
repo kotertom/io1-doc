@@ -19,6 +19,7 @@
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 \usepackage{placeins}
+\usepackage{listings}
 \usepackage{longtable}
 \usepackage[counterclockwise, figuresleft]{rotating}
 
@@ -325,6 +326,15 @@ Pomimo tego, że serwer komunikacji pośredniczy w każdej wymianie informacji, 
 \subsubsection{Protokół}
 \par
 Wszystkie wiadomości zostają przekonwertowane na format JSON. Wybór ten jest motywowany niezależnością od języka programowania, powszechnością parserów oraz choćby tym, że format JSON jest bardziej zwięzły niż XML. Następnie łańcuch znaków jest pakowany w pakiety TCP/IP i transmitowany. TCP, mimo że powolniejszy niż UDP, bo wymaga potwierdzeń i uwzględnia retransmisję, jest wygodniejszy w użyciu. Ponadto prędkość UDP nie zostałaby w pełni wykorzystana, ponieważ gra nie jest na tyle złożona.
-
+\par
+Przykładowy komunikat - zlecenie ruchu o jedno pole w górę - wygląda następująco:
+\begin{lstlisting}
+{ 
+	"type":"ActionRequest<Move>",
+	"data":{
+		"dir":"0"
+	}
+}
+\end{lstlisting}
 
 \end{document}
