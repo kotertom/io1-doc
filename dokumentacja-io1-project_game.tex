@@ -170,4 +170,42 @@ Zależności między obiektami powinny zachodzić jak na poniższym diagramie kl
 \end{sidewaysfigure}
 \FloatBarrier
 
+\subsection{Opis obiektów}
+
+\begin{description}
+	\item[Player] Podstawowe informacje o graczu: drużyna, pozycja na planszy.
+
+	\item[GameMaster] Reprezentacja mistrza gry.
+
+	\item[ActualPlayer] Bieżący użytkownik systemu, jeśli jest on graczem. Posiada operacje wykonywania ruchów i akcji w grze oraz komunikacji z innymi graczami. Przechowuje zdobyte informacje o stanie gry (planszę) oraz o zadaniu, jeśli jakieś znalazł w trakcie gry.
+
+	\item[ActualGameMaster] Bieżący użytkownik systemu, jeśli jest on mistrzem gry. Posiada operacje inicjalizacji gry i generowania planszy. Przechowuje pełną informację o planszy i stanie gry oraz o tym, które zadania są użyteczne, a które nie.
+
+	\item[Team] Drużyna. Są dwie faktyczne drużyna oraz jedna sztuczna, która jest „właścicielem” pól w obszarze zadań.
+
+	\item[Board] Plansza, czyli stan gry --- faktyczny (w przypadku mistrza gry) lub widziany przez gracza.
+
+	\item[Field] Pojedyncze pole na planszy. Posiada odwołanie do drużyny-właściciela; w przypadku pola w obszarze celów będzie to prawdziwa drużyna, a w przypadku pola w obszarze zadań --- instancja TasksTeam. Pole posiada informację o graczu, który na nim stoi. Ponadto dla pól w obszarze zadań jest informacja o zadaniu, które może się znajdować na danym polu, a dla pól w obszarze celów informacja, czy na polu znajduje się cel (o ile użytkownik to wie).
+
+	\item[Piece] Zadanie. Może być użyteczne lub nie (użytkownik może nie wiedzieć).
+
+	\item[Action] Akcja wykonywana przez gracza, taka jak ruch, test zadania, rozpoczęcie komunikacji z innym graczem.
+
+	\item[CommunicativeEntity] Użytkownik systemu mogący komunikować się z innymi użytkownikami. Do komunikacji używa instancji klasy Messenger.
+
+	\item[Messenger] Obiekt wykorzystywany przez użytkownika do komunikacji z innymi. Umożliwia wysyłanie komunikatów i reagowanie na komunikaty przychodzące. Utrzymuje listę połączeń do innych użytkowników (tunelowanych przez serwer komunikacji).
+
+	\item[Message] Komunikat nadawany lub odbierany przez użytkownika. Wyróżnia się kilka rodzajów:
+		\begin{description}
+			\item[ActionRequest<T>] Żądanie zatwierdzenia pewnej akcji gracza, wysyłane przez niego do mistrza gry.
+			\item[PlayerMessage] Wiadomość od jednego gracza do drugiego.
+			\item[PlayerCommunicationRequest] Prośba o rozpoczęcie wymiany informacji, kierowana przez jednego gracza do drugiego.
+			\item[GameStateUpdate] Informacja (być może częściowa) o zmianach stanu gry (czyli o zmianach na planszy), wysyłana przez mistrza gry do gracza (np. wskutek wykonania przez gracza poprawnej akcji).
+		\end{description}
+
+	\item[Connection] Połączenie z użytkownikiem. Obiekt odpowiadający za komunikację niskopoziomową.
+
+	\item[ComunicationServer] Serwer komunikacji przekazujący wiadomości między użytkownikami. Singleton. Posiada listę bezpośrednich połączeń do użytkowników. Nadchodzące wiadomości są gromadzone w kolejce, z której serwer je pobiera i przekazuje do adresatów.
+\end{description}
+
 \end{document}
