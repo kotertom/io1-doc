@@ -22,6 +22,14 @@
 \usepackage{listings}
 \usepackage{longtable}
 \usepackage[counterclockwise, figuresleft]{rotating}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \let\Oldsection\section
 \renewcommand{\section}{\FloatBarrier\Oldsection}
@@ -340,9 +348,34 @@ Przykładowy komunikat - zlecenie ruchu o jedno pole w górę - wygląda następ
 \subsection{Użytkowanie aplikacji}
 
 \subsubsection{Uruchomienie i konfiguracja}
+\par
+Grę uruchamia się za pomocą prostej aplikacji administratora, pozwalającej ustalić konfigurację rozgrywki i uruchomić ją, a następnie za jej pomocą śledzić jej przebieg. Poza tą aplikacją konfigurację można również wprowadzić edytując plik konfiguracyjny i uruchamiając grę bezpośrednio, ale jest to metoda mniej user-friendly.
 
 \subsubsection{Przebieg rozgrywki}
 
 \subsubsection{Wyjątki}
+\par
+Podczas rozgrywki może zdarzyć się wiele nieprzewidzianych błędów. Wynikają one przede wszystkim z wadliwych połączeń. Poniżej opisane są akcje podejmowane w wypadku możliwych scenariuszy błędów.
+
+\paragraph{Utrata łączności z graczem}
+\par
+W momencie, gdy serwer stwierdzi brak połączenia z graczem, podejmie zdefiniowaną w czasie konfiguracji akcję. Możliwe będą:
+\begin{enumerate}
+\item Zakończenie gry bez podania wyniku
+\item Zakończenie gry, przegrywa drużyna, która straciła gracza
+\item Kontynuacja gry bez rozłączonego gracza (jeśli zostanie 0 graczy w danej drużynie, koniec gry - drużyna przegrywa walkowerem lub gra kończy się bez podania wyniku)
+\item Próba uruchomienia i dołączenia nowego gracza, by kontynuował w miejscu rozłączonego gracza (w przypadku kilku nieudanych prób dołączenia można zakończyć grę z błędem)
+\end{enumerate}
+
+\paragraph{Utrata łączności z serwerem}
+\par
+Jeśli to mistrz gry traci łączność z serwerem, to serwer informuje o tym graczy, którzy sami powinni się rozłączyć. Po chwili ucina pozostałe połączenia i się wyłącza. W tym czasie mistrz gry wyłącza się. Aplikacja gry zwraca komunikat o błędzie i proponuje ponowne uruchomienie.
+\par
+Jeśli gracz traci łączność z serwerem, próbuje połączyć się ponownie z maksymalną liczbą prób określoną podczas konfiguracji. Jeśli mu się to nie uda, wyłącza się.
+
+\paragraph{Utrata łączności z mistrzem gry}
+\par
+W przypadku utraty łączności z mistrzem gry patrz par. \textit{1.7.3.2 Utrata łączności z serwerem} - akapit 1.
+
 
 \end{document}
