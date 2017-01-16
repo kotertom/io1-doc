@@ -23,6 +23,7 @@
 \usepackage{longtable}
 \usepackage[counterclockwise, figuresleft]{rotating}
 \usepackage{titlesec}
+\usepackage{pdfpages}
 
 \setcounter{secnumdepth}{4}
 
@@ -59,7 +60,7 @@
 
 \vspace{1cm}
 
-{\large v1.2}
+{\large v2.0a}
 
 \vspace{1cm}
 
@@ -79,12 +80,33 @@
 \resizebox{\textwidth}{!}{
 \begin{tabular}{|p{3cm}|p{4cm}|p{6cm}|p{2cm}|}
 \hline
-Data                 & Autor             & Opis zmiany                                                               & Wersja                                                 \\ \hline
-Nov 27, 2016 & Sebastian Jakubiak, Mikołaj Karaś, Tomasz Koter & Rewizja i poprawa spójności dokumentu. Pomniejsza korekcja tekstu. & 1.2 \\ \hline
-Nov 27, 2016 & Sebastian Jakubiak & Dodano opis klas. Poprawiono formatowanie i wygląd tabel. Dodano diagramy w wyższej jakości. & 1.1 \\ \hline
-Nov 26, 2016 & Tomasz Koter & Pierwsza wersja dokumentu & 1.0a \\ \hline
+Data                 
+& Autor             
+& Opis zmiany                                                               
+& Wersja                                                 
+\\ \hline
+Jan 16, 2017
+& Sebastian Jakubiak, Mikołaj Karaś, Tomasz Koter 
+& Korekcja tabeli przypadków użycia. Dodano wymagania niefunkcjonalne. Dodano sekcje: System komunikacji, Użytkowanie aplikacji.
+& 2.0a
+\\ \hline
+Nov 27, 2016 
+& Sebastian Jakubiak, Mikołaj Karaś, Tomasz Koter 
+& Rewizja i poprawa spójności dokumentu. Pomniejsza korekcja tekstu. 
+& 1.2 
+\\ \hline
+Nov 27, 2016 
+& Sebastian Jakubiak 
+& Dodano opis klas. Poprawiono formatowanie i wygląd tabel. Dodano diagramy w wyższej jakości. 
+& 1.1 
+\\ \hline
+Nov 26, 2016 
+& Tomasz Koter 
+& Pierwsza wersja dokumentu 
+& 1.0a 
+\\ \hline
                       
-\end{tabular}%
+\end{tabular}
 }
 \end{table}
 
@@ -433,6 +455,12 @@ Scenariusz, w którm mistrz gry musi o czymś powiadomić wszystkich graczy, np.
 Grę uruchamia się za pomocą prostej aplikacji administratora, pozwalającej ustalić konfigurację rozgrywki i uruchomić ją, a następnie za jej pomocą śledzić jej przebieg. Poza tą aplikacją konfigurację można również wprowadzić edytując plik konfiguracyjny i uruchamiając grę bezpośrednio, ale jest to metoda mniej user-friendly.
 
 \subsubsection{Przebieg rozgrywki}
+\par
+Aplikacja kliencka będzie uruchamiać się równolegle z serwerem komunikacji. Następuje inicjalizacja serwera komunikacji, a następnie aplikacja kliencka stara się nawiązać połączenie z tym serwerem. W razie niepowodzenia, natychmiast ponawia próbę, zaś w razie sukcesu oczekuje na rozpoczęcie gry. W międzyczasie serwer komunikacji startuje proces GMa i także oczekuje na rozpoczęcie gry. Proces GMa, ustala liczbę grających, a następnie czeka aż wszyscy z nich się połączą z serwerem komunikacji. Gdy to nastąpi, generuje plansze i rozpoczyna grę. Kolejną fazą działania programu jest sama gra. Aplikacja kliencka wykonuje ruchy turowo, następnie komunikat o wykonanym ruchu jest przekazywany do GMa poprzez serwer komunikacji, GM zaś obsługuje i odpowiada na zapytania graczy, oraz generuje nowe elementy, jednocześnie sprawdzając, czy nie wystąpił warunek zakończenia gry. Jeżeli gra jest kontynuowana, serwer komunikacji przekazuje graczom odpowiedź GMa i cykl się powtarza.
+\par
+W przypadku zakończenia gry, GM wysyła graczom poprzez serwer komunikacji informację o zakończeniu gry i jej wynikach. Po ogłoszeniu wyników następuje faza czyszczenia, klienci rozłączają się z serwerem komunikacji, a aplikacja kliencka jest zamykana. GM, także jest rozłączany z serwerem, i jego proces jest zakańczany. Serwer komunikacji, po pewnym czasie sprawdza, czy wciąż istnieją jakieś połączenia z graczami i wymusza ich zakończenie, a sam się wyłącza.
+
+\includepdf{../res/activity_diagram.pdf}
 
 \subsubsection{Wyjątki}
 \par
