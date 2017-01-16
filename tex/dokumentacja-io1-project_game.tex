@@ -65,7 +65,7 @@
 
 \vfill
 
-{\itshape {\large 27 listopada 2016r.}}
+{\itshape {\large 16 stycznia 2017r.}}
 \end{titlepage}
 
 \tableofcontents
@@ -241,12 +241,24 @@ Game Master
 \\ \hline
 Communication Server
 & Aplikacja służąca do ustanowienia komunikacji między graczami i Game Masterem. Jej jedynym celem jest przesyłanie danych i zarządzanie połączeniami.
+\\ \hline
 \end{longtable}
 \FloatBarrier
 
 \subsection{Wymagania niefunkcjonalne}
 \par
-Żadne wymagania niefunkcjonalne nie zostały określone dla tego projektu.
+
+\subsubsection{Użyteczność}
+
+Uruchomienie systemu w domyślnej konfiguracji nie będzie wymagało dużego nakładu pracy.
+
+\subsubsection{Niezawodność}
+
+System będzie odporny na krótkie (kilkusekundowe) przerwy w łączności, o ile te przerwy nie występują zbyt często.
+
+\subsubsection{Wydajność}
+
+System będzie w stanie obsłużyć 10 graczy naraz.
 
 \subsection{Architektura rozwiązania}
 \par
@@ -344,6 +356,75 @@ Przykładowy komunikat - zlecenie ruchu o jedno pole w górę - wygląda następ
 	}
 }
 \end{lstlisting}
+
+\subsubsection{Scenariusze wymiany komunikatów}
+
+\paragraph{Akcja gracza}
+
+Sytuacja, gdy gracz zamierza wykonać jakąś akcję, taką jak: przemieszczenie się, sprawdzenie lub wykorzystanie posiadanego zadania, sprawdzenie sąsiadujących pól.
+Gracz wysyła żądanie do mistrza gry. Mistrz gry odsyła wynik akcji lub informację, że jest nieprawidłowa.
+
+\begin{figure}[!h]
+	\centering
+	\caption{Diagram sekwencji}
+\resizebox{0.9\textwidth}{!}{
+	\includegraphics{../res/p_gm_action_generic}
+}
+\end{figure}
+\FloatBarrier
+
+\paragraph{Komunikacja graczy}
+
+Sytuacja, gdy jeden gracz chce wymienić informacje z drugim. Pierwszy gracz musi zapytać drugiego o pozwolenie. Musi w tym pośredniczyć mistrz gry, ponieważ jest to traktowane jako rodzaj akcji. Drugi gracz może prośbę zaakceptować lub nie. W przypadku akceptacji obie strony przesyłają sobie nawzajem informacje.
+
+\begin{figure}[!h]
+	\centering
+	\caption{Diagram sekwencji}
+\resizebox{0.9\textwidth}{!}{
+	\includegraphics{../res/pp_gm_comm}
+}
+\end{figure}
+\FloatBarrier
+\par
+
+\paragraph{Komunikacja kierownika z zespołem}
+
+Sytuacja, gdy kierownik zespołu chce wymienić informacje innym członkiem drużyny. Kierownik nie musi pytać o pozwolenie.
+
+\begin{figure}[!h]
+	\centering
+	\caption{Diagram sekwencji}
+\resizebox{0.9\textwidth}{!}{
+	\includegraphics{../res/p_tl_comm}
+}
+\end{figure}
+\FloatBarrier
+\par
+
+\paragraph{Rozgłaszanie komunikatów}
+
+Scenariusz, w którm mistrz gry musi o czymś powiadomić wszystkich graczy, np. o zakończeniu gry. Do każdego gracza jest wysyłana taka sama wiadomość.
+
+\begin{figure}[!h]
+	\centering
+	\caption{Diagram sekwencji}
+\resizebox{0.9\textwidth}{!}{
+	\includegraphics{../res/broadcast}
+}
+\end{figure}
+\FloatBarrier
+
+\paragraph{Łączenie z serwerem}
+
+Łączenie jest dokonywane przez graczy i mistrza gry tuż po wystartowaniu. W przypadku niepowodzenia podejmowane są kolejne próby aż do wyczerpania ich limitu. Udana próba połączenia kończy się odbiorem potwierdzenia od serwera.
+
+\begin{figure}[!h]
+	\centering
+	\resizebox{0.9\textwidth}{!}{
+	\includegraphics{../res/srv_conn}
+}
+	\caption{Diagram sekwencji}
+\end{figure}
 
 \subsection{Użytkowanie aplikacji}
 
