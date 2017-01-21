@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  21 JAN 2017 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  21 JAN 2017 17:55
 entering extended mode
 **./dokumentacja-io1-project_game.tex
 (dokumentacja-io1-project_game.tex
@@ -1015,156 +1015,158 @@ Overfull \hbox (25.19998pt too wide) in alignment at lines 252--270
  [] [] 
  []
 
-[6] <../res/architecture.png, id=129, 534.99875pt x 434.62375pt>
-File: ../res/architecture.png Graphic file (type png)
+[6] [7] <../res/architecture.pdf, id=132, 532.99126pt x 483.8075pt>
+File: ../res/architecture.pdf Graphic file (type pdf)
 
-<use ../res/architecture.png>
-Package pdftex.def Info: ../res/architecture.png used on input line 330.
-(pdftex.def)             Requested size: 534.99744pt x 434.62268pt.
+<use ../res/architecture.pdf>
+Package pdftex.def Info: ../res/architecture.pdf used on input line 333.
+(pdftex.def)             Requested size: 532.98996pt x 483.80632pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7] <../res/class_diagram.png, id=133, 1234.6125pt x 680.5425pt>
+<../res/class_diagram.png, id=133, 1234.6125pt x 680.5425pt>
 File: ../res/class_diagram.png Graphic file (type png)
 
 <use ../res/class_diagram.png>
-Package pdftex.def Info: ../res/class_diagram.png used on input line 343.
+Package pdftex.def Info: ../res/class_diagram.png used on input line 347.
 (pdftex.def)             Requested size: 1234.6095pt x 680.54083pt.
 
-Overfull \hbox (105.18556pt too wide) in paragraph at lines 339--344
+Overfull \hbox (105.18556pt too wide) in paragraph at lines 343--348
 []|  [] 
  []
 
+[8 <../res/architecture.pdf>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <../res/architecture.png>] [9 <../res/class_diagram.png>]
-Overfull \hbox (7.61287pt too wide) in paragraph at lines 362--363
+[9] [10 <../res/class_diagram.png>]
+Overfull \hbox (7.61287pt too wide) in paragraph at lines 366--367
 []\T1/lmr/m/n/10.95 Pojedyncze pole na plan-szy. Po-siada od-wo-ªa-nie do dru»y
 ny-wªa±ciciela;
  []
 
-[10
+[11
 
 ]
-Overfull \hbox (3.57745pt too wide) in paragraph at lines 374--375
+Overfull \hbox (3.57745pt too wide) in paragraph at lines 378--379
 []\T1/lmr/m/n/10.95 ›¡danie za-twier-dze-nia pew-nej ak-cji gra-cza, wy-
  []
 
-[11] [12] <../res/p_gm_action_generic.pdf, id=151, 370.38374pt x 190.7125pt>
+[12] [13] <../res/p_gm_action_generic.pdf, id=156, 370.38374pt x 190.7125pt>
 File: ../res/p_gm_action_generic.pdf Graphic file (type pdf)
 
 <use ../res/p_gm_action_generic.pdf>
-Package pdftex.def Info: ../res/p_gm_action_generic.pdf used on input line 429.
+Package pdftex.def Info: ../res/p_gm_action_generic.pdf used on input line 433.
 
 (pdftex.def)             Requested size: 370.38283pt x 190.71202pt.
 
-Overfull \hbox (53.55692pt too wide) in paragraph at lines 426--430
+Overfull \hbox (53.55692pt too wide) in paragraph at lines 430--434
  []|  [] 
  []
 
-<../res/pp_gm_comm.pdf, id=152, 471.7625pt x 299.1175pt>
+<../res/pp_gm_comm.pdf, id=157, 471.7625pt x 299.1175pt>
 File: ../res/pp_gm_comm.pdf Graphic file (type pdf)
 
 <use ../res/pp_gm_comm.pdf>
-Package pdftex.def Info: ../res/pp_gm_comm.pdf used on input line 443.
+Package pdftex.def Info: ../res/pp_gm_comm.pdf used on input line 447.
 (pdftex.def)             Requested size: 471.76134pt x 299.11676pt.
 
-Overfull \hbox (75.32607pt too wide) in paragraph at lines 440--444
+Overfull \hbox (75.32607pt too wide) in paragraph at lines 444--448
  []|  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <../res/p_gm_action_generic.pdf>]
-<../res/p_tl_comm.pdf, id=161, 247.92625pt x 197.73875pt>
+[14 <../res/p_gm_action_generic.pdf>]
+<../res/p_tl_comm.pdf, id=166, 247.92625pt x 197.73875pt>
 File: ../res/p_tl_comm.pdf Graphic file (type pdf)
 
 <use ../res/p_tl_comm.pdf>
-Package pdftex.def Info: ../res/p_tl_comm.pdf used on input line 457.
+Package pdftex.def Info: ../res/p_tl_comm.pdf used on input line 461.
 (pdftex.def)             Requested size: 247.92564pt x 197.73827pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <../res/pp_gm_comm.pdf>]
-<../res/broadcast.pdf, id=172, 428.60126pt x 175.65625pt>
+[15 <../res/pp_gm_comm.pdf>]
+<../res/broadcast.pdf, id=177, 428.60126pt x 175.65625pt>
 File: ../res/broadcast.pdf Graphic file (type pdf)
 
 <use ../res/broadcast.pdf>
-Package pdftex.def Info: ../res/broadcast.pdf used on input line 472.
+Package pdftex.def Info: ../res/broadcast.pdf used on input line 476.
 (pdftex.def)             Requested size: 428.6002pt x 175.6558pt.
 
-Overfull \hbox (37.46715pt too wide) in paragraph at lines 469--473
+Overfull \hbox (37.46715pt too wide) in paragraph at lines 473--477
  []|  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15 <../res/p_tl_comm.pdf>]
-<../res/srv_conn.pdf, id=181, 277.035pt x 342.27875pt>
+[16 <../res/p_tl_comm.pdf>]
+<../res/srv_conn.pdf, id=186, 277.035pt x 342.27875pt>
 File: ../res/srv_conn.pdf Graphic file (type pdf)
 
 <use ../res/srv_conn.pdf>
-Package pdftex.def Info: ../res/srv_conn.pdf used on input line 484.
+Package pdftex.def Info: ../res/srv_conn.pdf used on input line 488.
 (pdftex.def)             Requested size: 277.03432pt x 342.2779pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16 <../res/broadcast.pdf>]
+[17 <../res/broadcast.pdf>]
 Overfull \vbox (0.78307pt too high) has occurred while \output is active []
 
 
-[17 <../res/srv_conn.pdf>]
-<../res/activity_diagram.pdf, id=198, 597.23125pt x 845.1575pt>
+[18 <../res/srv_conn.pdf>]
+<../res/activity_diagram.pdf, id=204, 597.23125pt x 845.1575pt>
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf>
-Package pdftex.def Info: ../res/activity_diagram.pdf used on input line 500.
+Package pdftex.def Info: ../res/activity_diagram.pdf used on input line 510.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
  <use ../res/activity_diagram.pdf>
-Package pdftex.def Info: ../res/activity_diagram.pdf used on input line 500.
+Package pdftex.def Info: ../res/activity_diagram.pdf used on input line 510.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
-<../res/activity_diagram.pdf, id=201, page=1, 597.23125pt x 845.1575pt>
+<../res/activity_diagram.pdf, id=207, page=1, 597.23125pt x 845.1575pt>
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf, page 1>
 Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-500.
+510.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf, page 1>
 Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-500.
+510.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
- [18]
+ [19]
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf, page 1>
 Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-500.
-(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
-File: ../res/activity_diagram.pdf Graphic file (type pdf)
-
-<use ../res/activity_diagram.pdf, page 1>
-Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-500.
+510.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf, page 1>
 Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-500.
+510.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
- [19 <../res/activity_diagram.pdf>]
-[20] (dokumentacja-io1-project_game.aux) ) 
+File: ../res/activity_diagram.pdf Graphic file (type pdf)
+
+<use ../res/activity_diagram.pdf, page 1>
+Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
+510.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [20 <../res/activity_diagram.pdf>]
+[21] (dokumentacja-io1-project_game.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  7537 strings out of 493334
  101641 string characters out of 3139251
@@ -1172,17 +1174,17 @@ Here is how much of TeX's memory you used:
  10873 multiletter control sequences out of 15000+200000
  48448 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,20n,48p,1065b,969s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/en
-c/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb>
+ 41i,20n,48p,923b,969s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/lm/lmri12.pfb>
 Output written on D:/studia/sem5/IO1/Dokumentacja/tex/dokumentacja-io1-project_
-game.pdf (21 pages, 1075128 bytes).
+game.pdf (22 pages, 1102547 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
+ 241 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

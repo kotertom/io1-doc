@@ -318,17 +318,21 @@ Wydajność
 
 \subsection{Architektura rozwiązania}
 \par
-Program jest zaimplementowany w strukturze klient-serwer, gdzie klientami są poszczególni gracze korzystający z aplikacji klienckiej (możliwe będzie korzystanie z jednej maszyny/aplikacji przez kilku graczy jednocześnie). Po stronie serwera gry działa serwer komunikacji oraz jednostka Mistrza Gry. Cała gra może nawet toczyć się lokalnie z lokalnymi połączeniami tak, że gracze i serwer gry znajdują się na jednej fizycznej maszynie. Gracze łączą się z serwerem za pomocą podanego adresu i portu.
+Program jest zaimplementowany w strukturze klient-serwer, gdzie klientami są poszczególni gracze korzystający z aplikacji klienckiej (możliwe będzie korzystanie z jednej maszyny przez kilku graczy jednocześnie) oraz mistrz gry. Po stronie serwera gry działa jedynie serwer komunikacji.
 \par
-Wszelka komunikacja gracz-gracz oraz gracz-Mistrz Gry będzie odbywać się za pośrednictwem serwera komunikacji, nawet w wypadku skonfigurowania całego systemu lokalnie na jednej maszynie.
+Jeden gracz może brać udział jednocześnie w maksymalnie jednej grze. Jeden serwer komunikacji może obsługiwać jednocześnie wiele gier. Jeden mistrz gry może obsługiwać jednocześnie tylko jedną grę. Mistrz gry, zakładając swoją grę, wysyła prośbę do serwera komunikacji o utworzenie wpisu o jego grze. Serwer komunikacji, przyjmując zaakceptowanie prośby, odsyła unikalny identyfikator gry. Znając identyfikator danej gry oraz adres i port serwera, gracze mogą się z nią połączyć. W ten sposób realizowanych może być wiele gier równolegle za pomocą tego samego serwera, równocześnie pozostając odseparowanymi.
+\par
+Wszelka komunikacja gracz-gracz oraz gracz-Mistrz Gry będzie odbywać się za pośrednictwem serwera komunikacji. Cała gra może również toczyć się lokalnie z lokalnymi połączeniami tak, że gracze, mistrz gry i serwer komunikacji znajdują się na jednej fizycznej maszynie. Nie ma to znaczenia, wtedy tak samo cała komunikacja odbywa się przez lokalny serwer komunikacji.
 
+\begin{center}
 \begin{figure}[!h]
 \caption{Architektura systemu}
 \resizebox{\textwidth}{!}
 {
-\includegraphics{../res/architecture}
+\includegraphics{../res/architecture.pdf}
 }
 \end{figure}
+\end{center}
 \FloatBarrier
 
 \par
@@ -489,18 +493,19 @@ Scenariusz, w którm mistrz gry musi o czymś powiadomić wszystkich graczy, np.
 
 \subsubsection{Uruchomienie i konfiguracja}
 \par
-Grę uruchamia się za pomocą prostej aplikacji administratora (uruchomieniowej), pozwalającej ustalić konfigurację rozgrywki i uruchomić ją, a następnie za jej pomocą śledzić jej przebieg. Poza tą aplikacją konfigurację można również wprowadzić edytując plik konfiguracyjny i uruchamiając grę bezpośrednio, ale jest to metoda mniej user-friendly.
+Aby uruchomić grę, potrzebne jest uruchomienie i skonfigurowanie serwera komunikacji, mistrza gry oraz graczy. Serwer komunikacji jest aplikacją konsolową pobierającą bieżącą konfigurację z edytowalnego pliku konfiguracyjnego. Mistrz gry jest aplikacją konsolową lub aplikacją z interfejsem graficznym umożliwiającą konfigurację, uruchomienie i śledzenie gry. Gracz jest również aplikacją konsolową przyjmującą adres i port serwera oraz identyfikator gry. Brakujący gracze mogą być również uruchomieni przez mistrza gry w wypadku potrzeby zapełnienia miejsc.
 \par
-Zdalnych graczy należy uruchomić z poszczególnych maszyn za pomocą aplikacji klienckiej. Jej parametrami są adres i port serwera.
+Zdalnych graczy i mistrzów gier należy uruchomić z poszczególnych maszyn. Serwer nie jest w stanie skontaktować się z własnej inicjatywy z komputerem w sieci niebędącym jakimś serwerem.
 
 \subsubsection{Przebieg rozgrywki}
 \par
-Aplikacje klienckie uruchamiają się równolegle z serwerem gry (serwer gry to mistrz gry i serwer komunikacji; równolegle w tym wypadku oznacza ręczne uruchomienie przez użytkownika/ów). Następuje inicjalizacja serwera komunikacji za pomocą aplikacji uruchomieniowej, a aplikacje klienckie od momentu uruchomienia starają się nawiązać połączenie z tym serwerem. W razie niepowodzenia, natychmiast ponawia próbę, zaś w razie sukcesu oczekuje na rozpoczęcie gry. Po uruchomieniu serwera komunikacji aplikacja uruchomieniowa uruchamia program mistrza gry, który tak samo jak aplikacja kliencka stara się połączyć z serwerem komunikacji.
+Gracze są w stanie połączyć się z serwerem gry dopiero w momencie, gdy serwer komunikacji posiada wpis w słowniku związany z danym identyfikatorem gry. Proces mistrza gry ustala liczbę graczy według konfiguracji, a następnie czeka aż wszyscy z nich się połączą z serwerem komunikacji. Gdy to nastąpi, generuje planszę i rozpoczyna grę. 
 \par
-Gracze są w stanie połączyć się z serwerem gry dopiero w momencie, gdy mistrz gry skonfiguruje poczekalnię.
-Proces mistrza gry ustala liczbę graczy według konfiguracji, a następnie czeka aż wszyscy z nich się połączą z serwerem komunikacji. Gdy to nastąpi, generuje plansze i rozpoczyna grę. Kolejną fazą działania programu jest sama gra. Aplikacja kliencka wykonuje ruchy turowo, następnie komunikat o wykonanym ruchu jest przekazywany do GMa poprzez serwer komunikacji, GM zaś obsługuje i odpowiada na zapytania graczy, oraz generuje nowe elementy, jednocześnie sprawdzając, czy nie wystąpił warunek zakończenia gry. Jeżeli gra jest kontynuowana, serwer komunikacji przekazuje graczom odpowiedź GMa i cykl się powtarza.
+Kolejną fazą działania programu jest sama gra. Aplikacja gracza wykonuje kolejne ruchy natychmiast po otrzymaniu odpowiedzi o powodzeniu poprzedniego ruchu i podjęciu decyzji o bieżącym. Decyzje gracz komputerowy podejmuje na podstawie przypisanej mu strategii. Komunikat o decyzji ruchu (lub innej akcji) jest przekazywany do mistrza gry poprzez serwer komunikacji. Mistrz gry zaś obsługuje i odpowiada na zlecenia graczy oraz generuje nowe elementy, jednocześnie sprawdzając, czy nie wystąpił warunek zakończenia gry. Dopóki gra może być kontynuowana, każdy z graczy kontynuuje swój cykl postępowania.
 \par
-W przypadku zakończenia gry, GM wysyła graczom poprzez serwer komunikacji informację o zakończeniu gry i jej wynikach. Po ogłoszeniu wyników następuje faza czyszczenia, klienci rozłączają się z serwerem komunikacji, a aplikacja kliencka jest zamykana. GM, także jest rozłączany z serwerem, i jego proces jest zakańczany. Serwer komunikacji, po pewnym czasie sprawdza, czy wciąż istnieją jakieś połączenia z graczami i wymusza ich zakończenie, a sam się wyłącza.
+W przypadku zakończenia gry, mistrz gry wysyła graczom poprzez serwer komunikacji informację o zakończeniu gry i jej wynikach. Po ogłoszeniu wyników i decyzji o zakończeniu sesji następuje faza czyszczenia, klienci rozłączają się z serwerem komunikacji, a aplikacje graczy są zamykane. Mistrz gry pozostaje uruchomiony, jako że jest aplikacją posiadającą wszystkie dane na temat gry. Te dane użytkownik (człowiek) może przejrzeć i zapisać do pliku. Serwer komunikacji należy wyłączyć osobno.
+\par
+Po ogłoszeniu wyników, zanim gracze się rozłączą, można podjąć decyzję o kontynuacji sesji i ponowieniu gry na tych samych bądź innych (wyspecyfikowanych przez użytkownika) ustawieniach.
 
 \includepdf{../res/activity_diagram.pdf}
 
