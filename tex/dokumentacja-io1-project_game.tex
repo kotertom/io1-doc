@@ -131,12 +131,15 @@ Gracze mogą komunikować się między sobą w ramach drużyny i w ten sposób w
 \par
 Poniższy diagram oraz tabela prezentują wszystkie możliwe przypadki użycia systemu gry, co jednocześnie pokrywa postawione w ramach tego projektu wymogi funkcjonalne.
 
-\hspace*{-4cm}
-\resizebox{1.5\textwidth}{!}
-{
-\includegraphics{../res/usecase}
-}
-\FloatBarrier
+%\hspace*{-4cm}
+%\resizebox{1.5\textwidth}{!}
+%{
+%\includegraphics{../res/usecase}
+%}
+%\FloatBarrier
+
+\includepdf[angle=90]{../res/usecase.pdf}
+
 
 \hspace*{-4cm}
 \begin{longtable}{|p{.20\textwidth}|p{.03\textwidth}|p{.2\textwidth}|p{.7\textwidth}|}
@@ -270,21 +273,52 @@ Communication Server
 \subsection{Wymagania niefunkcjonalne}
 \par
 
-\subsubsection{Użyteczność}
-
-Uruchomienie systemu w domyślnej konfiguracji nie będzie wymagało dużego nakładu pracy.
-
-\subsubsection{Niezawodność}
-
-System będzie odporny na krótkie (kilkusekundowe) przerwy w łączności, o ile te przerwy nie występują zbyt często.
-
-\subsubsection{Wydajność}
-
-System będzie w stanie obsłużyć 10 graczy naraz.
+\begin{center}
+\begin{table}[!h]
+\centering
+\def\arraystretch{2}%
+\caption{Lista wymagań niefunkcjonalnych}
+\label{my-label}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|m{3cm}|p{0.5cm}|p{10cm}|}
+\hline
+Obszar wymagań 
+& Lp 
+& Opis                                                                                         
+\\ \hline
+\multirow{2}{*}{Użyteczność}    
+& 1               
+& Uruchomienie serwera gry wymaga jedynie posługiwania się jedną aplikacją uruchomieniową. Uruchomienie graczy następuje za pomocą aplikacji konsolowej. Uruchomienie lokalnych graczy może nastąpić za pomocą aplikacji uruchomieniowej.
+\\ \cline{2-3}
+& 2               
+& Aplikacja uruchomieniowa posiada prosty interfejs graficzny umożliwiający łatwe skonfigurowanie ustawień gry.   
+\\ \hline
+\multirow{2}{*}{Niezawodność}   
+& 3               
+& System jest odporny na krótkie (kilkusekundowe) przerwy w łączności, o ile te przerwy nie występują zbyt często.   
+\\ \cline{2-3}
+& 4 
+& Błędy połączeń występujące w czasie gry nie powodują wyłączenia aplikacji uruchomieniowej. 
+\\ \hline
+Wydajność      
+& 5               
+& System będzie w stanie obsłużyć minimum 10 graczy w obu drużynach łącznie naraz. 
+\\ \hline
+\multirow{3}{*}{Utrzymanie}
+& 6
+& Można skonfigurować następujące aspekty gry: liczbę graczy, strategie poszczególnych drużyn, planszę, algorytm generowania zadań (wybrać z dostępnych i/lub zmieniać parametry liczbowe).
+\\ \cline{2-3}
+& 7
+& Aplikacja dostępna jest jedynie w języku angielskim.
+\\ \hline
+\end{tabular}
+}
+\end{table}
+\end{center}
 
 \subsection{Architektura rozwiązania}
 \par
-Program zostanie zaimplementowany w strukturze klient-serwer, gdzie klientami będą poszczególni gracze korzystający z aplikacji klienckiej (możliwe będzie korzystanie z jednej maszyny/aplikacji przez kilku graczy jednocześnie z opcją podziału ekranu). Po stronie serwera działać będzie serwer komunikacji oraz jednostka Mistrza Gry.
+Program jest zaimplementowany w strukturze klient-serwer, gdzie klientami są poszczególni gracze korzystający z aplikacji klienckiej (możliwe będzie korzystanie z jednej maszyny/aplikacji przez kilku graczy jednocześnie). Po stronie serwera gry działa serwer komunikacji oraz jednostka Mistrza Gry. Cała gra może nawet toczyć się lokalnie z lokalnymi połączeniami tak, że gracze i serwer gry znajdują się na jednej fizycznej maszynie. Gracze łączą się z serwerem za pomocą podanego adresu i portu.
 \par
 Wszelka komunikacja gracz-gracz oraz gracz-Mistrz Gry będzie odbywać się za pośrednictwem serwera komunikacji, nawet w wypadku skonfigurowania całego systemu lokalnie na jednej maszynie.
 
@@ -389,7 +423,8 @@ Gracz wysyła żądanie do mistrza gry. Mistrz gry odsyła wynik akcji lub infor
 \begin{figure}[!h]
 	\centering
 	\caption{Diagram sekwencji}
-\resizebox{0.9\textwidth}{!}{
+		\hspace*{-2cm}
+\resizebox{1.3\textwidth}{!}{
 	\includegraphics{../res/p_gm_action_generic}
 }
 \end{figure}
@@ -402,7 +437,8 @@ Sytuacja, gdy jeden gracz chce wymienić informacje z drugim. Pierwszy gracz mus
 \begin{figure}[!h]
 	\centering
 	\caption{Diagram sekwencji}
-\resizebox{0.9\textwidth}{!}{
+		\hspace*{-2.5cm}
+\resizebox{1.4\textwidth}{!}{
 	\includegraphics{../res/pp_gm_comm}
 }
 \end{figure}
@@ -416,7 +452,7 @@ Sytuacja, gdy kierownik zespołu chce wymienić informacje innym członkiem dru�
 \begin{figure}[!h]
 	\centering
 	\caption{Diagram sekwencji}
-\resizebox{0.9\textwidth}{!}{
+\resizebox{\textwidth}{!}{
 	\includegraphics{../res/p_tl_comm}
 }
 \end{figure}
@@ -430,7 +466,8 @@ Scenariusz, w którm mistrz gry musi o czymś powiadomić wszystkich graczy, np.
 \begin{figure}[!h]
 	\centering
 	\caption{Diagram sekwencji}
-\resizebox{0.9\textwidth}{!}{
+		\hspace*{-1.3cm}
+\resizebox{1.2\textwidth}{!}{
 	\includegraphics{../res/broadcast}
 }
 \end{figure}
@@ -442,7 +479,7 @@ Scenariusz, w którm mistrz gry musi o czymś powiadomić wszystkich graczy, np.
 
 \begin{figure}[!h]
 	\centering
-	\resizebox{0.9\textwidth}{!}{
+	\resizebox{\textwidth}{!}{
 	\includegraphics{../res/srv_conn}
 }
 	\caption{Diagram sekwencji}
@@ -452,11 +489,16 @@ Scenariusz, w którm mistrz gry musi o czymś powiadomić wszystkich graczy, np.
 
 \subsubsection{Uruchomienie i konfiguracja}
 \par
-Grę uruchamia się za pomocą prostej aplikacji administratora, pozwalającej ustalić konfigurację rozgrywki i uruchomić ją, a następnie za jej pomocą śledzić jej przebieg. Poza tą aplikacją konfigurację można również wprowadzić edytując plik konfiguracyjny i uruchamiając grę bezpośrednio, ale jest to metoda mniej user-friendly.
+Grę uruchamia się za pomocą prostej aplikacji administratora (uruchomieniowej), pozwalającej ustalić konfigurację rozgrywki i uruchomić ją, a następnie za jej pomocą śledzić jej przebieg. Poza tą aplikacją konfigurację można również wprowadzić edytując plik konfiguracyjny i uruchamiając grę bezpośrednio, ale jest to metoda mniej user-friendly.
+\par
+Zdalnych graczy należy uruchomić z poszczególnych maszyn za pomocą aplikacji klienckiej. Jej parametrami są adres i port serwera.
 
 \subsubsection{Przebieg rozgrywki}
 \par
-Aplikacja kliencka będzie uruchamiać się równolegle z serwerem komunikacji. Następuje inicjalizacja serwera komunikacji, a następnie aplikacja kliencka stara się nawiązać połączenie z tym serwerem. W razie niepowodzenia, natychmiast ponawia próbę, zaś w razie sukcesu oczekuje na rozpoczęcie gry. W międzyczasie serwer komunikacji startuje proces GMa i także oczekuje na rozpoczęcie gry. Proces GMa, ustala liczbę grających, a następnie czeka aż wszyscy z nich się połączą z serwerem komunikacji. Gdy to nastąpi, generuje plansze i rozpoczyna grę. Kolejną fazą działania programu jest sama gra. Aplikacja kliencka wykonuje ruchy turowo, następnie komunikat o wykonanym ruchu jest przekazywany do GMa poprzez serwer komunikacji, GM zaś obsługuje i odpowiada na zapytania graczy, oraz generuje nowe elementy, jednocześnie sprawdzając, czy nie wystąpił warunek zakończenia gry. Jeżeli gra jest kontynuowana, serwer komunikacji przekazuje graczom odpowiedź GMa i cykl się powtarza.
+Aplikacje klienckie uruchamiają się równolegle z serwerem gry (serwer gry to mistrz gry i serwer komunikacji; równolegle w tym wypadku oznacza ręczne uruchomienie przez użytkownika/ów). Następuje inicjalizacja serwera komunikacji za pomocą aplikacji uruchomieniowej, a aplikacje klienckie od momentu uruchomienia starają się nawiązać połączenie z tym serwerem. W razie niepowodzenia, natychmiast ponawia próbę, zaś w razie sukcesu oczekuje na rozpoczęcie gry. Po uruchomieniu serwera komunikacji aplikacja uruchomieniowa uruchamia program mistrza gry, który tak samo jak aplikacja kliencka stara się połączyć z serwerem komunikacji.
+\par
+Gracze są w stanie połączyć się z serwerem gry dopiero w momencie, gdy mistrz gry skonfiguruje poczekalnię.
+Proces mistrza gry ustala liczbę graczy według konfiguracji, a następnie czeka aż wszyscy z nich się połączą z serwerem komunikacji. Gdy to nastąpi, generuje plansze i rozpoczyna grę. Kolejną fazą działania programu jest sama gra. Aplikacja kliencka wykonuje ruchy turowo, następnie komunikat o wykonanym ruchu jest przekazywany do GMa poprzez serwer komunikacji, GM zaś obsługuje i odpowiada na zapytania graczy, oraz generuje nowe elementy, jednocześnie sprawdzając, czy nie wystąpił warunek zakończenia gry. Jeżeli gra jest kontynuowana, serwer komunikacji przekazuje graczom odpowiedź GMa i cykl się powtarza.
 \par
 W przypadku zakończenia gry, GM wysyła graczom poprzez serwer komunikacji informację o zakończeniu gry i jej wynikach. Po ogłoszeniu wyników następuje faza czyszczenia, klienci rozłączają się z serwerem komunikacji, a aplikacja kliencka jest zamykana. GM, także jest rozłączany z serwerem, i jego proces jest zakańczany. Serwer komunikacji, po pewnym czasie sprawdza, czy wciąż istnieją jakieś połączenia z graczami i wymusza ich zakończenie, a sam się wyłącza.
 
