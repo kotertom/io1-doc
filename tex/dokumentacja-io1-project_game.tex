@@ -24,6 +24,9 @@
 \usepackage[counterclockwise, figuresleft]{rotating}
 \usepackage{titlesec}
 \usepackage{pdfpages}
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[placement={!ht},name=Algorytm]{alg}
+\DeclareFloatingEnvironment[placement={!ht},name=Komunikat JSON]{json}
 
 \setcounter{secnumdepth}{4}
 
@@ -60,13 +63,13 @@
 
 \vspace{1cm}
 
-{\large v2.0a}
+{\large v2.2}
 
 \vspace{1cm}
 
 \vfill
 
-{\itshape {\large 16 stycznia 2017r.}}
+{\itshape {\large 22 stycznia 2017r.}}
 \end{titlepage}
 
 \tableofcontents
@@ -83,7 +86,17 @@
 Data                 
 & Autor             
 & Opis zmiany                                                               
-& Wersja                                                 
+& Wersja
+\\ \hline
+Jan 22, 2017   
+& Sebastian Jakubiak, Mikołaj Karaś, Tomasz Koter 
+& Dodano sekcję Strategie AI. Dodano więcej przykładowych komunikatów. Uzupełniono wymagania niefunkcjonalne o wpis o testach.
+& 2.2                                              
+\\ \hline
+Jan 21, 2017
+& Sebastian Jakubiak, Mikołaj Karaś, Tomasz Koter 
+& Poprawiono diagramy, architekturę rozwiązania. Dodano opis prowadzenia wielu rozgrywek za pośrednictwem jednego serwera. Dodano opis podziału na aplikacje.
+& 2.1
 \\ \hline
 Jan 16, 2017
 & Sebastian Jakubiak, Mikołaj Karaś, Tomasz Koter 
@@ -310,6 +323,9 @@ Wydajność
 \\ \cline{2-3}
 & 7
 & Aplikacja dostępna jest jedynie w języku angielskim.
+\\ \cline{2-3}
+& 8
+& Przetestowane zostaną fragmenty kodu dotyczące nawiązywania połączeń oraz przesyłania komunikatów.
 \\ \hline
 \end{tabular}
 }
@@ -406,8 +422,10 @@ Pomimo tego, że serwer komunikacji pośredniczy w każdej wymianie informacji, 
 \subsubsection{Protokół}
 \par
 Wszystkie wiadomości zostają przekonwertowane na format JSON. Wybór ten jest motywowany niezależnością od języka programowania, powszechnością parserów oraz choćby tym, że format JSON jest bardziej zwięzły niż XML. Następnie łańcuch znaków jest pakowany w pakiety TCP/IP i transmitowany. TCP, mimo że powolniejszy niż UDP, bo wymaga potwierdzeń i uwzględnia retransmisję, jest wygodniejszy w użyciu. Ponadto prędkość UDP nie zostałaby w pełni wykorzystana, ponieważ gra nie jest na tyle złożona.
-\par
-Przykładowy komunikat - zlecenie ruchu o jedno pole w górę - wygląda następująco:
+
+\lstset{tabsize=2}
+\begin{json}
+\caption{Przykładowy komunikat - zlecenie ruchu o jedno pole w górę}
 \begin{lstlisting}
 { 
 	"type":"ActionRequest<Move>",
@@ -416,6 +434,54 @@ Przykładowy komunikat - zlecenie ruchu o jedno pole w górę - wygląda następ
 	}
 }
 \end{lstlisting}
+\end{json}
+
+\begin{json}
+\caption{Informacja od gracza o widzianej planszy}
+\begin{lstlisting}
+{ 
+	"type":"PlayerMessage",
+	"data":{
+		"message":{
+			"board":{
+				"width":"12",
+				"height":"36",
+				"tiles":[
+					{
+						"ownerTeam":"2",
+						"player":"",
+						"type":"1",
+						"piece":""
+					},
+					{ ... /* another tile info */ },
+					... // more tiles
+				]
+			}
+		}
+	}
+}
+\end{lstlisting}
+\end{json}
+
+\begin{json}
+\caption{Prośba o rozpoczęcie komunikacji}
+\begin{lstlisting}
+{ 
+	"type":"PlayerCommunicationRequest",
+	"data":{ }
+}
+\end{lstlisting}
+\end{json}
+
+\begin{json}
+\caption{Zlecenie odkrycia planszy wokół gracza}
+\begin{lstlisting}
+{ 
+	"type":"ActionRequest<Discover>",
+	"data":{ }
+}
+\end{lstlisting}
+\end{json}
 
 \subsubsection{Scenariusze wymiany komunikatów}
 
@@ -532,6 +598,23 @@ Jeśli gracz traci łączność z serwerem, próbuje połączyć się ponownie z
 \paragraph{Utrata łączności z mistrzem gry}
 \par
 W przypadku utraty łączności z mistrzem gry patrz par. \textit{1.7.3.2 Utrata łączności z serwerem} - akapit 1.
+
+\subsection{Strategie AI}
+\par
+Każda drużyna przed rozpoczęciem rozgrywki ma przyporządkowaną strategię dla jej graczy. Implementacja programu zawiera więcej niż jedną strategię możliwą do wyboru przez użytkownika aplikacji. Poniżej przedstawiony jest schemat jednej z nich.
+
+\begin{alg}[H]
+\caption{Strategia brute-force}
+\begin{enumerate}
+\item Odkryj pola wokół siebie, po każdym ruchu.
+\item Przesuń się w kierunku najbliższego Piece (najmniejszy Distance).
+\item Co losową liczbę ruchów (z przedziału [3, 6]) wyślij request komunikacji z innych graczem ze swojej drużyny, lub w 20\% przypadków z drużyny przeciwnej.
+\item W przypadku requestu od gracza ze swojej drużyny, zawsze się zgódź, wpp zgódź się w 20\% przypadków
+\item W przypadku podniesienia Piece, komunikuj się z team leaderem, lub w przypadku team leadera, z losowym graczem ze swojej drużyny.
+\item Umieść piece w losowym nieodkrytym polu Task.
+\item Zakomunikuj efekt kapitanowi
+\end{enumerate}
+\end{alg}
 
 
 \end{document}

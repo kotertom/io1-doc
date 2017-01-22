@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  21 JAN 2017 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  22 JAN 2017 17:41
 entering extended mode
 **./dokumentacja-io1-project_game.tex
 (dokumentacja-io1-project_game.tex
@@ -721,38 +721,50 @@ File: pppdftex.def 2016/12/11 v0.5g Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count135
 \AM@templatesizebox=\box40
 )
+(C:\Users\revai\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\newfloat.sty
+Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
+)
+Package newfloat Info: New float `alg' with options `placement={!ht},name=Algor
+ytm' on input line 28.
+\c@alg=\count136
+Package newfloat Info: float type `alg'=8 on input line 28.
+Package newfloat Info: New float `json' with options `placement={!ht},name=Komu
+nikat JSON' on input line 29.
+\c@json=\count137
+Package newfloat Info: float type `json'=16 on input line 29.
+
 (dokumentacja-io1-project_game.aux)
 \openout1 = `dokumentacja-io1-project_game.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 48.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\revai\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
+\scratchcounter=\count138
 \scratchdimen=\dimen160
 \scratchbox=\box41
-\nofMPsegments=\count137
-\nofMParguments=\count138
+\nofMPsegments=\count139
+\nofMParguments=\count140
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count139
+\MPscratchCnt=\count141
 \MPscratchDim=\dimen161
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
 \everyMPtoPDFconversion=\toks36
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -796,7 +808,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@lstlisting=\count142
+\c@lstlisting=\count144
 \AtBeginShipoutBox=\box42
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
@@ -813,7 +825,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 <../res/logo.png, id=1, 376.40625pt x 367.3725pt>
 File: ../res/logo.png Graphic file (type png)
  <use ../res/logo.png>
-Package pdftex.def Info: ../res/logo.png used on input line 52.
+Package pdftex.def Info: ../res/logo.png used on input line 55.
 (pdftex.def)             Requested size: 56.4585pt x 55.10349pt.
 
 [1
@@ -855,336 +867,367 @@ File: uesint.fd
 \openout3 = `dokumentacja-io1-project_game.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
 []|\T1/lmr/m/n/10.95 Sebastian Ja-ku-biak,
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 110--110
+Underfull \hbox (badness 1009) in paragraph at lines 123--123
+[]|\T1/lmr/m/n/10.95 Dodano sek-cj¦ Stra-te-gie AI. Do-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+[]|\T1/lmr/m/n/10.95 Sebastian Ja-ku-biak,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+[]|\T1/lmr/m/n/10.95 Sebastian Ja-ku-biak,
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 123--123
 []|\T1/lmr/m/n/10.95 Korekcja ta-beli przy-pad-ków u»y-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
 []|\T1/lmr/m/n/10.95 Sebastian Ja-ku-biak,
  []
 
-[1] <../res/usecase.pdf, id=16, 845.1575pt x 598.235pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1] [2] <../res/usecase.pdf, id=20, 845.1575pt x 598.235pt>
 File: ../res/usecase.pdf Graphic file (type pdf)
 
 <use ../res/usecase.pdf>
-Package pdftex.def Info: ../res/usecase.pdf used on input line 141.
+Package pdftex.def Info: ../res/usecase.pdf used on input line 154.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: ../res/usecase.pdf Graphic file (type pdf)
  <use ../res/usecase.pdf>
-Package pdftex.def Info: ../res/usecase.pdf used on input line 141.
+Package pdftex.def Info: ../res/usecase.pdf used on input line 154.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 
-<../res/usecase.pdf, id=19, page=1, 845.1575pt x 598.235pt>
+<../res/usecase.pdf, id=23, page=1, 845.1575pt x 598.235pt>
 File: ../res/usecase.pdf Graphic file (type pdf)
 
 <use ../res/usecase.pdf, page 1>
-Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 141.
+Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 154.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: ../res/usecase.pdf Graphic file (type pdf)
  <use ../res/usecase.pdf, page 1>
-Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 141.
+Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 154.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
- [2]
+ [3]
 File: ../res/usecase.pdf Graphic file (type pdf)
 
 <use ../res/usecase.pdf, page 1>
-Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 141.
+Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 154.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: ../res/usecase.pdf Graphic file (type pdf)
  <use ../res/usecase.pdf, page 1>
-Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 141.
+Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 154.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: ../res/usecase.pdf Graphic file (type pdf)
 
 <use ../res/usecase.pdf, page 1>
-Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 141.
+Package pdftex.def Info: ../res/usecase.pdf, page1 used on input line 154.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
- [3 <../res/usecase.pdf>]
-Overfull \hbox (2.12743pt too wide) in paragraph at lines 150--151
+ [4 <../res/usecase.pdf>]
+Overfull \hbox (2.12743pt too wide) in paragraph at lines 163--164
 []|\T1/lmr/m/n/10.95 Lp| 
  []
 
 
-Overfull \hbox (96.79623pt too wide) in alignment at lines 145--154
+Overfull \hbox (96.79623pt too wide) in alignment at lines 158--167
  [] [] [] [] 
  []
 
 
-Overfull \hbox (96.79623pt too wide) in alignment at lines 154--156
+Overfull \hbox (96.79623pt too wide) in alignment at lines 167--169
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 []|\T1/lmr/m/n/10.95 Attempt to
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 191--192
+Underfull \hbox (badness 5622) in paragraph at lines 204--205
 []|\T1/lmr/m/n/10.95 Request com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 []|\T1/lmr/m/n/10.95 Accept com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 \T1/lmr/m/n/10.95 mu-ni-ca-tion
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 202--203
+Underfull \hbox (badness 5696) in paragraph at lines 215--216
 []|\T1/lmr/m/n/10.95 Kapitan Dru-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-[]|\T1/lmr/m/n/10.95 Communicate
- []
-
-
-Underfull \hbox (badness 2158) in paragraph at lines 204--205
-\T1/lmr/m/n/10.95 with te-am-ma-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
-[]|\T1/lmr/m/n/10.95 Generate
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 217--218
+[]|\T1/lmr/m/n/10.95 Communicate
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 217--218
+\T1/lmr/m/n/10.95 with te-am-ma-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+[]|\T1/lmr/m/n/10.95 Generate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 []|\T1/lmr/m/n/10.95 Generate a
  []
 
 
-Overfull \hbox (3.73743pt too wide) in paragraph at lines 232--232
+Overfull \hbox (3.73743pt too wide) in paragraph at lines 245--245
 []|\T1/lmr/m/n/10.95 Communication 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 []|\T1/lmr/m/n/10.95 Receive mes-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 []|\T1/lmr/m/n/10.95 Send/transmit
  []
 
 
-Overfull \hbox (96.79623pt too wide) in alignment at lines 156--240
+Overfull \hbox (96.79623pt too wide) in alignment at lines 169--253
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 []|\T1/lmr/m/n/10.95 Manage con-
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 246--247
+Underfull \hbox (badness 2932) in paragraph at lines 259--260
 \T1/lmr/m/n/10.95 nec-tion sta-tu-
  []
 
 
-Overfull \hbox (96.79623pt too wide) in alignment at lines 240--249
+Overfull \hbox (96.79623pt too wide) in alignment at lines 253--262
  [] [] [] [] 
  []
 
-[4] [5]
-Underfull \hbox (badness 5696) in paragraph at lines 261--262
+[5] [6]
+Underfull \hbox (badness 5696) in paragraph at lines 274--275
 []|\T1/lmr/m/n/10.95 Kapitan Dru-
  []
 
 
-Overfull \hbox (3.73743pt too wide) in paragraph at lines 267--268
+Overfull \hbox (3.73743pt too wide) in paragraph at lines 280--281
 []|\T1/lmr/m/n/10.95 Communication
  []
 
 
-Overfull \hbox (25.19998pt too wide) in alignment at lines 252--270
+Overfull \hbox (25.19998pt too wide) in alignment at lines 265--283
  [] [] 
  []
 
-[6] [7] <../res/architecture.pdf, id=132, 532.99126pt x 483.8075pt>
+[7] [8] <../res/architecture.pdf, id=135, 532.99126pt x 483.8075pt>
 File: ../res/architecture.pdf Graphic file (type pdf)
 
 <use ../res/architecture.pdf>
-Package pdftex.def Info: ../res/architecture.pdf used on input line 333.
+Package pdftex.def Info: ../res/architecture.pdf used on input line 349.
 (pdftex.def)             Requested size: 532.98996pt x 483.80632pt.
-
-<../res/class_diagram.png, id=133, 1234.6125pt x 680.5425pt>
+ [9 <../res/architecture.pdf>]
+<../res/class_diagram.png, id=142, 1234.6125pt x 680.5425pt>
 File: ../res/class_diagram.png Graphic file (type png)
 
 <use ../res/class_diagram.png>
-Package pdftex.def Info: ../res/class_diagram.png used on input line 347.
+Package pdftex.def Info: ../res/class_diagram.png used on input line 363.
 (pdftex.def)             Requested size: 1234.6095pt x 680.54083pt.
 
-Overfull \hbox (105.18556pt too wide) in paragraph at lines 343--348
+Overfull \hbox (105.18556pt too wide) in paragraph at lines 359--364
 []|  [] 
  []
 
-[8 <../res/architecture.pdf>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9] [10 <../res/class_diagram.png>]
-Overfull \hbox (7.61287pt too wide) in paragraph at lines 366--367
+[10] [11 <../res/class_diagram.png>]
+Overfull \hbox (7.61287pt too wide) in paragraph at lines 382--383
 []\T1/lmr/m/n/10.95 Pojedyncze pole na plan-szy. Po-siada od-wo-ªa-nie do dru»y
 ny-wªa±ciciela;
  []
 
-[11
+[12
 
 ]
-Overfull \hbox (3.57745pt too wide) in paragraph at lines 378--379
+Overfull \hbox (3.57745pt too wide) in paragraph at lines 394--395
 []\T1/lmr/m/n/10.95 ›¡danie za-twier-dze-nia pew-nej ak-cji gra-cza, wy-
  []
 
-[12] [13] <../res/p_gm_action_generic.pdf, id=156, 370.38374pt x 190.7125pt>
+[13]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 456.
+
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 456.
+ [14]
+
+LaTeX Warning: Text page 15 contains only floats.
+
+
+Overfull \vbox (0.86954pt too high) has occurred while \output is active []
+
+
+[15] <../res/p_gm_action_generic.pdf, id=163, 370.38374pt x 190.7125pt>
 File: ../res/p_gm_action_generic.pdf Graphic file (type pdf)
 
 <use ../res/p_gm_action_generic.pdf>
-Package pdftex.def Info: ../res/p_gm_action_generic.pdf used on input line 433.
+Package pdftex.def Info: ../res/p_gm_action_generic.pdf used on input line 499.
 
 (pdftex.def)             Requested size: 370.38283pt x 190.71202pt.
 
-Overfull \hbox (53.55692pt too wide) in paragraph at lines 430--434
+Overfull \hbox (53.55692pt too wide) in paragraph at lines 496--500
  []|  [] 
  []
 
-<../res/pp_gm_comm.pdf, id=157, 471.7625pt x 299.1175pt>
+<../res/pp_gm_comm.pdf, id=164, 471.7625pt x 299.1175pt>
 File: ../res/pp_gm_comm.pdf Graphic file (type pdf)
 
 <use ../res/pp_gm_comm.pdf>
-Package pdftex.def Info: ../res/pp_gm_comm.pdf used on input line 447.
+Package pdftex.def Info: ../res/pp_gm_comm.pdf used on input line 513.
 (pdftex.def)             Requested size: 471.76134pt x 299.11676pt.
 
-Overfull \hbox (75.32607pt too wide) in paragraph at lines 444--448
+Overfull \hbox (75.32607pt too wide) in paragraph at lines 510--514
  []|  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <../res/p_gm_action_generic.pdf>]
-<../res/p_tl_comm.pdf, id=166, 247.92625pt x 197.73875pt>
+[16 <../res/p_gm_action_generic.pdf>]
+<../res/p_tl_comm.pdf, id=173, 247.92625pt x 197.73875pt>
 File: ../res/p_tl_comm.pdf Graphic file (type pdf)
 
 <use ../res/p_tl_comm.pdf>
-Package pdftex.def Info: ../res/p_tl_comm.pdf used on input line 461.
+Package pdftex.def Info: ../res/p_tl_comm.pdf used on input line 527.
 (pdftex.def)             Requested size: 247.92564pt x 197.73827pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15 <../res/pp_gm_comm.pdf>]
-<../res/broadcast.pdf, id=177, 428.60126pt x 175.65625pt>
+[17 <../res/pp_gm_comm.pdf>]
+<../res/broadcast.pdf, id=184, 428.60126pt x 175.65625pt>
 File: ../res/broadcast.pdf Graphic file (type pdf)
 
 <use ../res/broadcast.pdf>
-Package pdftex.def Info: ../res/broadcast.pdf used on input line 476.
+Package pdftex.def Info: ../res/broadcast.pdf used on input line 542.
 (pdftex.def)             Requested size: 428.6002pt x 175.6558pt.
 
-Overfull \hbox (37.46715pt too wide) in paragraph at lines 473--477
+Overfull \hbox (37.46715pt too wide) in paragraph at lines 539--543
  []|  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16 <../res/p_tl_comm.pdf>]
-<../res/srv_conn.pdf, id=186, 277.035pt x 342.27875pt>
+[18 <../res/p_tl_comm.pdf>]
+<../res/srv_conn.pdf, id=194, 277.035pt x 342.27875pt>
 File: ../res/srv_conn.pdf Graphic file (type pdf)
 
 <use ../res/srv_conn.pdf>
-Package pdftex.def Info: ../res/srv_conn.pdf used on input line 488.
+Package pdftex.def Info: ../res/srv_conn.pdf used on input line 554.
 (pdftex.def)             Requested size: 277.03432pt x 342.2779pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17 <../res/broadcast.pdf>]
+[19 <../res/broadcast.pdf>]
 Overfull \vbox (0.78307pt too high) has occurred while \output is active []
 
 
-[18 <../res/srv_conn.pdf>]
-<../res/activity_diagram.pdf, id=204, 597.23125pt x 845.1575pt>
+[20 <../res/srv_conn.pdf>]
+<../res/activity_diagram.pdf, id=211, 597.23125pt x 845.1575pt>
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf>
-Package pdftex.def Info: ../res/activity_diagram.pdf used on input line 510.
+Package pdftex.def Info: ../res/activity_diagram.pdf used on input line 576.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
  <use ../res/activity_diagram.pdf>
-Package pdftex.def Info: ../res/activity_diagram.pdf used on input line 510.
+Package pdftex.def Info: ../res/activity_diagram.pdf used on input line 576.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
-<../res/activity_diagram.pdf, id=207, page=1, 597.23125pt x 845.1575pt>
+<../res/activity_diagram.pdf, id=214, page=1, 597.23125pt x 845.1575pt>
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf, page 1>
 Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-510.
+576.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf, page 1>
 Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-510.
+576.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
- [19]
+ [21]
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf, page 1>
 Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-510.
-(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
-File: ../res/activity_diagram.pdf Graphic file (type pdf)
-
-<use ../res/activity_diagram.pdf, page 1>
-Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-510.
+576.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
 <use ../res/activity_diagram.pdf, page 1>
 Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
-510.
+576.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
- [20 <../res/activity_diagram.pdf>]
-[21] (dokumentacja-io1-project_game.aux)
+File: ../res/activity_diagram.pdf Graphic file (type pdf)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+<use ../res/activity_diagram.pdf, page 1>
+Package pdftex.def Info: ../res/activity_diagram.pdf, page1 used on input line 
+576.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [22 <../res/activity_diagram.pdf>]
+[23] [24] (dokumentacja-io1-project_game.aux) ) 
 Here is how much of TeX's memory you used:
- 7537 strings out of 493334
- 101641 string characters out of 3139251
- 211640 words of memory out of 3000000
- 10873 multiletter control sequences out of 15000+200000
+ 7737 strings out of 493334
+ 104860 string characters out of 3139251
+ 215318 words of memory out of 3000000
+ 11067 multiletter control sequences out of 15000+200000
  48448 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,20n,48p,923b,969s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/lm/lmri12.pfb>
+ 41i,20n,48p,935b,1339s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/l
+m-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
 Output written on D:/studia/sem5/IO1/Dokumentacja/tex/dokumentacja-io1-project_
-game.pdf (22 pages, 1102547 bytes).
+game.pdf (25 pages, 1110097 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
+ 256 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
