@@ -130,7 +130,7 @@ Nov 26, 2016
 
 \subsection{Opis biznesowy}
 \par
-\textit{Project Game} jest grą mającą na celu symulację realizacji pewnego abstrakcyjnego projektu. Grać w nią może w ramach jednej sesji jednocześnie dowolna liczba ludzkich bądź komputerowych graczy w dwóch przeciwnych drużynach, zależna jedynie od upodobań założyciela gry oraz możliwości sprzętowych.
+\textit{Project Game} jest grą mającą na celu symulację realizacji pewnego abstrakcyjnego projektu. Grać w nią może w ramach jednej sesji jednocześnie dowolna liczba komputerowych graczy w dwóch przeciwnych drużynach, zależna jedynie od upodobań założyciela gry oraz możliwości sprzętowych.
 \par
 Jako dwie konkurujące drużyny gracze mają za zadanie zrealizować swój projekt jako pierwsi. Drużyna, która jako pierwsza skończy projekt, wygrywa, natomiast ta druga przegrywa.
 \par
@@ -500,6 +500,8 @@ Gracz wysyła żądanie do mistrza gry. Mistrz gry odsyła wynik akcji lub infor
 \end{figure}
 \FloatBarrier
 
+\newpage
+
 \paragraph{Komunikacja graczy}
 
 Sytuacja, gdy jeden gracz chce wymienić informacje z drugim. Pierwszy gracz musi zapytać drugiego o pozwolenie. Musi w tym pośredniczyć mistrz gry, ponieważ jest to traktowane jako rodzaj akcji. Drugi gracz może prośbę zaakceptować lub nie. W przypadku akceptacji obie strony przesyłają sobie nawzajem informacje.
@@ -513,7 +515,8 @@ Sytuacja, gdy jeden gracz chce wymienić informacje z drugim. Pierwszy gracz mus
 }
 \end{figure}
 \FloatBarrier
-\par
+
+\newpage
 
 \paragraph{Komunikacja kierownika z zespołem}
 
@@ -527,7 +530,7 @@ Sytuacja, gdy kierownik zespołu chce wymienić informacje innym członkiem dru�
 }
 \end{figure}
 \FloatBarrier
-\par
+\newpage
 
 \paragraph{Rozgłaszanie komunikatów}
 
@@ -543,13 +546,15 @@ Scenariusz, w którm mistrz gry musi o czymś powiadomić wszystkich graczy, np.
 \end{figure}
 \FloatBarrier
 
+\newpage
+
 \paragraph{Łączenie z serwerem}
 
 Łączenie jest dokonywane przez graczy i mistrza gry tuż po wystartowaniu. W przypadku niepowodzenia podejmowane są kolejne próby aż do wyczerpania ich limitu. Udana próba połączenia kończy się odbiorem potwierdzenia od serwera.
 
 \begin{figure}[!h]
 	\centering
-	\resizebox{\textwidth}{!}{
+	\resizebox{0.95\textwidth}{!}{
 	\includegraphics{../res/srv_conn}
 }
 	\caption{Diagram sekwencji}
